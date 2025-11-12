@@ -1,0 +1,5 @@
+# Lambda function dependencies
+# These are typically included in Lambda runtime, but listed here for reference
+boto3>=1.26.0
+botocore>=1.29.0
+
