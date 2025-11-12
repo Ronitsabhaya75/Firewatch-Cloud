@@ -1,4 +1,4 @@
-# 🔥 Firewatch
+# Firewatch
 
 **Secure, Scalable, Real-Time Wildfire Monitoring System**
 
@@ -14,31 +14,31 @@ Firewatch is a serverless AWS infrastructure that automatically fetches, process
 └─────────────────────────────────────────────────────────────────────┘
 
     ┌──────────────┐
-    │ EventBridge  │  ⏰ Every 15 minutes
+    │ EventBridge  │   Every 15 minutes
     │   Schedule   │
     └──────┬───────┘
            │
            ▼
     ┌──────────────────────┐
-    │  Lambda: Fetch Fires │  📡 Fetches from NASA FIRMS API
+    │  Lambda: Fetch Fires │   Fetches from NASA FIRMS API
     │  (fetch_fires.py)    │
     └──────────┬───────────┘
                │
                ▼
     ┌──────────────────────┐
-    │   SQS Queue (FIFO)   │  📬 Decouples & Buffers
+    │   SQS Queue (FIFO)   │   Decouples & Buffers
     │  + Dead Letter Queue │
     └──────────┬───────────┘
                │
                ▼
     ┌──────────────────────────┐
-    │ Lambda: Process Fires    │  🌍 Geocodes with BigDataCloud
+    │ Lambda: Process Fires    │   Geocodes with BigDataCloud
     │ (process_fires.py)       │
     └──────────┬───────────────┘
                │
                ▼
     ┌──────────────────────────┐
-    │  DynamoDB Table          │  💾 Stores enriched fire data
+    │  DynamoDB Table          │   Stores enriched fire data
     │  (firewatch-data)        │     + DynamoDB Streams enabled
     │  - fire_id (PK)          │
     │  - timestamp (SK)        │
@@ -48,29 +48,29 @@ Firewatch is a serverless AWS infrastructure that automatically fetches, process
                │ Stream
                ▼
     ┌──────────────────────────┐
-    │ Lambda: Stream Processor │  📊 Monitors changes
+    │ Lambda: Stream Processor │   Monitors changes
     │ (stream_processor.py)    │
     └──────────┬───────────────┘
                │
                ▼
     ┌──────────────────────────┐
-    │   SNS Topic              │  📧 Fire alerts & notifications
+    │   SNS Topic              │   Fire alerts & notifications
     │   (firewatch-alerts)     │
     └──────────────────────────┘
 
 ┌─────────────────────────────────────────────────────────────────────┐
 │                          SECURITY LAYER                              │
 ├─────────────────────────────────────────────────────────────────────┤
-│  🔐 AWS Secrets Manager                                             │
+│   AWS Secrets Manager                                             │
 │     - BigDataCloud API Key                                          │
 │     - NASA FIRMS API Key                                            │
 │                                                                      │
-│  🔒 VPC Private Subnets                                             │
+│   VPC Private Subnets                                             │
 │     - All Lambdas run in isolated subnets                           │
 │     - VPC Endpoints for DynamoDB, S3, Secrets Manager               │
 │     - NAT Gateway for external API calls                            │
 │                                                                     |
-│  📜 IAM Least Privilege                                             |
+│   IAM Least Privilege                                             |
 │     - Function-specific roles                                       │
 │     - No hardcoded credentials                                      │
 └─────────────────────────────────────────────────────────────────────┘
@@ -344,7 +344,7 @@ aws cloudwatch put-metric-alarm \
 
 ---
 
-## 💰 Cost Estimate
+##  Cost Estimate
 
 ### Monthly Costs (Approximate)
 
