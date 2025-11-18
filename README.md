@@ -433,7 +433,7 @@ aws dynamodb query \
 
 ## 🔒 Security Best Practices
 
-✅ **Implemented**:
+**Implemented**:
 - API keys in Secrets Manager
 - VPC isolation for Lambda
 - VPC endpoints for AWS services
@@ -453,7 +453,7 @@ aws dynamodb query \
 
 ---
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### No fires being detected
 
@@ -504,7 +504,7 @@ aws dynamodb query \
 
 ---
 
-## 🛠️ Development
+## Development
 
 ### Project Structure
 
@@ -540,7 +540,7 @@ To delete all resources:
 cdk destroy
 ```
 
-⚠️ **Note**: DynamoDB table has `RemovalPolicy.RETAIN` and will not be deleted. Delete manually if needed:
+**Note**: DynamoDB table has `RemovalPolicy.RETAIN` and will not be deleted. Delete manually if needed:
 
 ```bash
 aws dynamodb delete-table --table-name firewatch-data
@@ -548,7 +548,7 @@ aws dynamodb delete-table --table-name firewatch-data
 
 ---
 
-## 📚 API Documentation
+## API Documentation
 
 ### NASA FIRMS API
 
@@ -567,7 +567,7 @@ aws dynamodb delete-table --table-name firewatch-data
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please:
 
@@ -579,13 +579,13 @@ Contributions are welcome! Please:
 
 ---
 
-## 📝 License
+## License
 
 This project is provided as-is for educational and monitoring purposes.
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **NASA FIRMS**: For providing free, real-time wildfire data
 - **BigDataCloud**: For reverse geocoding services
@@ -594,7 +594,7 @@ This project is provided as-is for educational and monitoring purposes.
 
 ---
 
-## 📞 Support
+## Support
 
 For issues, questions, or contributions:
 - Open an issue on GitHub
@@ -603,4 +603,4 @@ For issues, questions, or contributions:
 
 ---
 
-**Built with ❤️ for wildfire awareness and monitoring**
+**Built with for wildfire awareness and monitoring**
