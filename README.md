@@ -6,7 +6,7 @@ Firewatch is a serverless AWS infrastructure that automatically fetches, process
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
@@ -78,36 +78,36 @@ Firewatch is a serverless AWS infrastructure that automatically fetches, process
 
 ---
 
-## ✨ Key Features
+## Key Features
 
-### 🔐 Security First
+### Security First
 - **Secrets Manager**: API keys stored securely, never in code
 - **VPC Isolation**: All Lambda functions run in private subnets
 - **VPC Endpoints**: Cost-optimized, secure access to AWS services
 - **IAM Least Privilege**: Each function has only the permissions it needs
 - **Point-in-Time Recovery**: DynamoDB backup enabled
 
-### 📈 Scalable & Reliable
+### Scalable & Reliable
 - **SQS Decoupling**: Handles burst traffic, automatic retries
 - **Dead Letter Queue**: Failed messages captured for analysis
 - **Concurrent Limits**: Prevents API throttling
 - **Batch Processing**: Efficient handling of multiple fires
 - **Deduplication**: Prevents duplicate fire records
 
-### 🔄 Real-Time Sync
+### Real-Time Sync
 - **EventBridge Schedule**: Automatic polling every 15 minutes (configurable)
 - **DynamoDB Streams**: Real-time change detection
 - **SNS Notifications**: Instant alerts for new fires
 - **Stream Processing**: Monitor all database changes
 
-### 🌍 Location Enrichment
+### Location Enrichment
 - **Reverse Geocoding**: Converts coordinates to human-readable locations
 - **BigDataCloud API**: City, state, country information
 - **GSI Index**: Fast queries by country/region
 
 ---
 
-## 🚀 Deployment
+## Deployment
 
 ### Prerequisites
 
@@ -214,7 +214,7 @@ Firewatch is a serverless AWS infrastructure that automatically fetches, process
 
 ---
 
-## 🗄️ Data Schema
+## Data Schema
 
 ### DynamoDB Table: `firewatch-data`
 
@@ -247,7 +247,7 @@ Firewatch is a serverless AWS infrastructure that automatically fetches, process
 
 ---
 
-## 🔧 Configuration
+## Configuration
 
 ### Adjust Polling Frequency
 
@@ -293,7 +293,7 @@ process_lambda.add_event_source(
 
 ---
 
-## 📈 Monitoring & Observability
+## Monitoring & Observability
 
 ### CloudWatch Logs
 
@@ -382,7 +382,7 @@ aws cloudwatch put-metric-alarm \
 
 ---
 
-## 🧪 Testing
+## Testing
 
 ### Test Fetch Lambda Locally
 
@@ -431,7 +431,7 @@ aws dynamodb query \
 
 ---
 
-## 🔒 Security Best Practices
+## Security Best Practices
 
 **Implemented**:
 - API keys in Secrets Manager
